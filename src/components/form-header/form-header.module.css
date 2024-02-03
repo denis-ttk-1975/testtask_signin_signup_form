@@ -1,0 +1,26 @@
+.title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40.85px;
+    color: #000842;
+    margin-bottom: 24px;
+
+}
+
+.substring {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21.79px;
+    color: #000842;
+    margin-bottom: 8px;
+
+}
+
+.linkString {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21.79px;
+    color: #0C21C1;
+    text-decoration: none;
+}
+

@@ -1,3 +1,36 @@
 .artBoard {
-    width: 50%;
+    width: 100%;
+    background-image: url("./../../images/main_theme.svg");
+    background-repeat: no-repeat;
+    background-size: 76%;
+    background-position: center top 15%;
+    box-sizing: border-box;
+    background-color: #000842;
+    border-radius: 15px;
+    margin: 21px 21px 21px 11.5px;
+    color: #fff;
+    position: relative;
 }
+
+.artBoard_textBox {
+    position: absolute;
+    bottom: 133px;
+    left: 88px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.artBoard_title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54.47px;
+}
+
+.artBoard_title {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 27.24px;
+}
+
+@media screen and (max-width: 900px) { .artBoard {display: none} }
