@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import styles from './app.module.css';
 
 import { ArtBoard } from './components/art-board/art-board';
-import { SignInPage } from './components/signin-page/signin-page';
+import { SignInArea } from './components/signin-area/signin-area';
 
 
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <main className={styles.main}>
-        <SignInPage />
+        <SignInArea />
         <ArtBoard />
       </main>
     </>

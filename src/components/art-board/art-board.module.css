@@ -1,6 +1,6 @@
 .artBoard {
     width: 100%;
-    background-image: url("./../../images/main_theme.svg");
+    background-image: url("./../../shared/images/main_theme.svg");
     background-repeat: no-repeat;
     background-size: 76%;
     background-position: center top 15%;

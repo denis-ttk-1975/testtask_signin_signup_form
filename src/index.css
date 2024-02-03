@@ -15,12 +15,12 @@ code {
     font-family: 'OpenSans';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/OpenSans-Regular.woff2') format('woff');
+    src: url('./shared/fonts/OpenSans-Regular.woff2') format('woff');
   }
   
   @font-face {
     font-family: 'OpenSans';
     font-style: semibold;
     font-weight: 600;
-    src: url('./fonts/OpenSans-SemiBold.woff2') format('woff');
+    src: url('./shared/fonts/OpenSans-SemiBold.woff2') format('woff');
   }
