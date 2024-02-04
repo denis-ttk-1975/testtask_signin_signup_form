@@ -24,5 +24,6 @@ export const Input = (props: IInputProps) => {
     return <div className={styles.input_wrapper}>
         <label htmlFor={props.id} className={styles.label}>{props.label}</label> 
         <div className={styles.inputField_wrapper}><img src={icon} alt={"Enter name"}/><input type="text" id={props.id} className={styles.input} placeholder = { props.placeholder }/></div>
+        <div className={styles.errorCaption}></div>
     </div>;
 }

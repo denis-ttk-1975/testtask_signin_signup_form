@@ -1,9 +1,10 @@
 import { JSX } from 'react'; // импорт библиотеки
 
-import { FormHeader } from '../form-header/form-header';
-import { Form } from '../form/form';
+import { FormHeader } from '../../features/form-header/form-header';
+import { Form } from '../../features/form/form';
+import { SocialNetworkBox } from '../../entities/socialNetworksBox/socialNetworksBox';
 
-import { IInputProps } from './../../features/input/input'
+import { IInputProps } from './../../entities/input/input'
 
 
 
@@ -40,7 +41,12 @@ export const SignInArea = () => {
         <div className={styles.form_wrapper}>
             <FormHeader title = 'Sign in' substring = 'If you don’t have an account register' linkString = 'Register here !' />
             <Form inputs = {inputArray} buttonText='Login'/>
+            <div className={styles.footerBox}>
+                <div className={styles.footerHeader}>or continue with</div>
+                <SocialNetworkBox />
+            </div>
         </div>
+
     </section>;
 }
 

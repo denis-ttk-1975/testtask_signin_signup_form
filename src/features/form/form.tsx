@@ -2,8 +2,8 @@ import { JSX } from 'react'; // импорт библиотеки
 
 import styles from './form.module.css';
 
-import { Input, IInputProps } from './../../features/input/input'
-import { SubmitButton } from './../../features/button/button'
+import { Input, IInputProps } from './../../entities/input/input'
+import { SubmitButton } from './../../entities/button/button'
 
 
 interface IFormProps {

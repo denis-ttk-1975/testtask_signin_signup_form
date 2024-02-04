@@ -1,9 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
-import styles from './app.module.css';
-
-import { ArtBoard } from './components/art-board/art-board';
-import { SignInArea } from './components/signin-area/signin-area';
+import styles from './App.module.css';
+import { ArtBoard } from './widgets/art-board/art-board';
+import { SignInArea } from './widgets/signin-area/signin-area';
 
 
 
