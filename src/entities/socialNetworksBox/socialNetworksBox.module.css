@@ -1,1 +1,4 @@
 .iconBox {display: flex; gap: 26.58px}
+.ref:hover {
+    cursor: url('./../../shared/images/pointer.png'), auto;
+}

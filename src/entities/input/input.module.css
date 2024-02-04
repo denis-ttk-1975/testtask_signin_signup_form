@@ -14,7 +14,7 @@
     font-size: 16px;
     line-height: 21.79px;
     padding-left: 12px;
-    color: #000842;
+    color: inherit;
 }
 
 .input::placeholder {
@@ -27,7 +27,12 @@
     display: flex;
     align-items: center;
     margin-bottom: 4px;
+    color: #000842;
     border-bottom: 2px solid #999;
+}    
+.inputField_wrapper_error {
+    border-bottom: 2px solid #EB4335;
+    color: #EB4335;
 }
 
 .label {
@@ -44,5 +49,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 21.79px;
+    color: #EB4335;
+
 
 }

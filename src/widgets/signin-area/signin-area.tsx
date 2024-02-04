@@ -6,19 +6,9 @@ import { SocialNetworkBox } from '../../entities/socialNetworksBox/socialNetwork
 
 import { IInputProps } from './../../entities/input/input'
 
-
-
-
 import styles from './signin-area.module.css';
 
 const inputArray: IInputProps[] = [
-    // {
-    //     id : 'name',
-    //     label: 'Name',
-    //     icon: 'man',
-    //     placeholder: 'Enter your Name', 
-    //     errorMessage:'Name must be longer than 3 chars'
-    // },
     {
         id : 'email',
         label: 'Email',

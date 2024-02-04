@@ -24,6 +24,10 @@
     text-decoration: none;
 }
 
+.linkString:hover {
+    cursor: url('./../../shared/images/pointer.png'), auto;
+}
+
 .formHeaderWrapper {
     margin-bottom: 42px;
 }

@@ -9,8 +9,8 @@ import styles from './socialNetworksBox.module.css';
 export const SocialNetworkBox = () => {
 
     return <div className={styles.iconBox}>
-        <a target='_blank' rel='noopener noreferrer' href="https://facebook.com"><img src={fb} alt={"Facebook"}/></a>
-        <a target='_blank' rel='noopener noreferrer' href="https://apple.com"><img src={apple} alt={"Apple"}/></a>
-        <a target='_blank' rel='noopener noreferrer' href="https://google.com"><img src={google} alt={"Google"}/></a>
+        <a target='_blank' rel='noopener noreferrer' href="https://facebook.com" className={styles.ref}><img src={fb} alt={"Facebook"}/></a>
+        <a target='_blank' rel='noopener noreferrer' href="https://apple.com" className={styles.ref}><img src={apple} alt={"Apple"}/></a>
+        <a target='_blank' rel='noopener noreferrer' href="https://google.com" className={styles.ref}><img src={google} alt={"Google"}/></a>
     </div>;
 }
