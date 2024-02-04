@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './App.module.css';
-import { ArtBoard } from './widgets/art-board/art-board';
-import { SignInArea } from './widgets/signin-area/signin-area';
+import { SigninPage } from './pages/signinPage/signinPage';
+import { SignupPage } from './pages/signupPage/signupPage';
+import { ConfirmEmailPage } from './pages/confirmEmailPage/confirmEmailPage';
 
 
 
@@ -9,8 +10,7 @@ function App() {
   return (
     <>
       <main className={styles.main}>
-        <SignInArea />
-        <ArtBoard />
+        <ConfirmEmailPage />
       </main>
     </>
   );

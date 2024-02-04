@@ -1,4 +1,4 @@
-import { JSX } from 'react'; // импорт библиотеки
+import React, { JSX } from 'react'; // импорт библиотеки
 
 import apple from './../../shared/images/apple_icon.svg';
 import fb from './../../shared/images/facebook_icon.svg';

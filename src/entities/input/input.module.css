@@ -19,7 +19,8 @@
 
 .input::placeholder {
     color: #000842;
-  }
+    font-family: 'OpenSans';
+}
 
 
 .inputField_wrapper {

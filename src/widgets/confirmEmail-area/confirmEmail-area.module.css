@@ -1,0 +1,54 @@
+.confirmEmail_Page {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 21px 11.5px 21px 21px;
+}
+
+.logo {
+    margin-left: 21px;
+    margin-bottom: 72px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27.24px;
+    color: #000842;
+}
+
+.form_wrapper {
+    max-width: 343px;
+    margin: auto;
+    margin-top: 289px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40.85px;
+    color: #000842;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21.79px;
+    color: #000842;
+    margin-bottom: 13px;
+}
+
+@media screen and (max-width: 900px) {
+    .confirmEmail_Page {
+        max-width: 343px;
+        margin: 21px;
+    }
+    .logo {
+        margin-left: 0;
+        margin-bottom: 42px;
+    }
+}

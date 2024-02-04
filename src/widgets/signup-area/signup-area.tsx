@@ -7,18 +7,16 @@ import { SocialNetworkBox } from '../../entities/socialNetworksBox/socialNetwork
 import { IInputProps } from './../../entities/input/input'
 
 
-
-
-import styles from './signin-area.module.css';
+import styles from './signup-area.module.css';
 
 const inputArray: IInputProps[] = [
-    // {
-    //     id : 'name',
-    //     label: 'Name',
-    //     icon: 'man',
-    //     placeholder: 'Enter your Name', 
-    //     errorMessage:'Name must be longer than 3 chars'
-    // },
+    {
+        id : 'name',
+        label: 'Name',
+        icon: 'man',
+        placeholder: 'Enter your Name', 
+        errorMessage:'Name must be longer than 3 chars'
+    },
     {
         id : 'email',
         label: 'Email',
@@ -32,21 +30,23 @@ const inputArray: IInputProps[] = [
         icon: 'padlock',
         placeholder: 'Enter your Password', 
         errorMessage:'Invalid Password'
+    },
+    {
+        id : 'confirm_password',
+        label: 'Confirm Password',
+        icon: 'padlock',
+        placeholder: 'Confirm your Password', 
+        errorMessage:'Invalid Password'
     }
 ];
 
-export const SignInArea = () => {
-    return <section className={styles['signIn_Page']}>
+export const SignUpArea = () => {
+    return <section className={styles['signUp_Page']}>
         <div className={styles.logo}>Your Logo</div>
         <div className={styles.form_wrapper}>
-            <FormHeader title = 'Sign in' substring = 'If you don’t have an account register' linkString = 'Register here !' />
-            <Form inputs = {inputArray} buttonText='Login'/>
-            <div className={styles.footerBox}>
-                <div className={styles.footerHeader}>or continue with</div>
-                <SocialNetworkBox />
-            </div>
+            <FormHeader title = 'Sign up' substring = 'If you already have an account register' linkString = 'Login here !' />
+            <Form inputs = {inputArray} buttonText='Register'/>
         </div>
 
     </section>;
 }
-

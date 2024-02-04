@@ -1,4 +1,4 @@
-import { JSX } from 'react'; // импорт библиотеки
+import React, { JSX } from 'react'; // импорт библиотеки
 
 import styles from './form.module.css';
 
