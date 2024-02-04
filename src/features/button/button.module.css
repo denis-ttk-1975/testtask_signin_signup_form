@@ -1,0 +1,13 @@
+.submitButton {
+    margin-top: 18px;
+    width: 341px;
+    height: 53px;
+    border-radius: 32px;
+    background-color: #0C21C1;
+    color: #fff;
+    border: none;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23.15px;
+
+}
