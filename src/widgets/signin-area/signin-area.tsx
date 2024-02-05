@@ -69,7 +69,7 @@ export const SignInArea = () => {
     return <section className={styles['signIn_Page']}>
         <div className={styles.logo}>Your Logo</div>
         <div className={styles.form_wrapper}>
-            <FormHeader title = 'Sign in' substring = 'If you don’t have an account register' linkString = 'Register here !' />
+            <FormHeader title = 'Sign in' substring = 'If you don’t have an account register' linkString = 'Register here !' link = '/signup' />
             <Form inputs = {inputArray} buttonText='Login' submitHandler={onSubmitSignInForm} />
             <div className={styles.footerBox}>
                 <div className={styles.footerHeader}>or continue with</div>

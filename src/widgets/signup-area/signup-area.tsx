@@ -12,6 +12,7 @@ import { complexPasswordRegex, emailRegex, threeCharsOrDigitsRegex } from './../
 
 
 import styles from './signup-area.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const inputArray: IInputProps[] = [
     {
@@ -46,6 +47,7 @@ const inputArray: IInputProps[] = [
 
 export const SignUpArea = () => {
 
+    const navigate = useNavigate();
     const { formState, setName, setEmail, setPassword, setConfirmPassword, checkName, checkEmail, checkPassword, checkConfirmPassword } = useSignUpStore();
 
     const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -56,7 +58,6 @@ export const SignUpArea = () => {
         checkEmail(true);
         setEmail(e.target.value);
     };
-
     const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
         checkPassword(true);
         setPassword(e.target.value);
@@ -74,13 +75,9 @@ export const SignUpArea = () => {
         if (!complexPasswordRegex.test(formState.passwordValue)) {checkPassword(false); formFailed = true;}
         if (formState.passwordValue !== formState.confirmPasswordValue) {checkConfirmPassword(false); formFailed = true;}
 
-        if (formFailed) {
-            return;
-        }
-
+        if (formFailed) { return; }
         await userCreate({name: formState.nameValue, email: formState.emailValue, password: formState.passwordValue});
-
-        return;
+        navigate('/confirm_email')
     };
 
     inputArray[0].onChange = onChangeName;
@@ -95,7 +92,7 @@ export const SignUpArea = () => {
     return <section className={styles['signUp_Page']}>
         <div className={styles.logo}>Your Logo</div>
         <div className={styles.form_wrapper}>
-            <FormHeader title = 'Sign up' substring = 'If you already have an account register' linkString = 'Login here !' />
+            <FormHeader title = 'Sign up' substring = 'If you already have an account register' linkString = 'Login here !' link = '/' />
             <Form inputs = {inputArray} buttonText='Register' submitHandler={onSubmitSignUpForm}/>
         </div>
     </section>;
