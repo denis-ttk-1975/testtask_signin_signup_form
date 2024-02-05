@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5b80bea4.css",
+    "main.js": "/static/js/main.7c23f616.js",
+    "static/js/787.42c60cfa.chunk.js": "/static/js/787.42c60cfa.chunk.js",
+    "static/media/main_theme.svg": "/static/media/main_theme.7328c61fc6601b79c818.svg",
+    "static/media/OpenSans-SemiBold.woff2": "/static/media/OpenSans-SemiBold.117298bec81d6c8250df.woff2",
+    "static/media/OpenSans-Regular.woff2": "/static/media/OpenSans-Regular.9ffed65db527232e9a9d.woff2",
+    "static/media/gmail.svg": "/static/media/gmail.a3724804987a1300880fc4ed46cb5690.svg",
+    "static/media/man_icon.svg": "/static/media/man_icon.5709820ce7688b727506eaf6df2a3972.svg",
+    "static/media/padlock_icon.svg": "/static/media/padlock_icon.06d616ffbd62d2f7717a8f5f1ddcf3a9.svg",
+    "static/media/google_icon.svg": "/static/media/google_icon.b699a771c4466e894134773df1ccd1e1.svg",
+    "static/media/apple_icon.svg": "/static/media/apple_icon.a0439cb491f6c27c029cdd207260129d.svg",
+    "static/media/mail_icon.svg": "/static/media/mail_icon.7ea48eea92b202c5f45c43ddceeca258.svg",
+    "static/media/facebook_icon.svg": "/static/media/facebook_icon.7a54318ce72e2035fbd20085fe9a65f9.svg",
+    "index.html": "/index.html",
+    "main.5b80bea4.css.map": "/static/css/main.5b80bea4.css.map",
+    "main.7c23f616.js.map": "/static/js/main.7c23f616.js.map",
+    "787.42c60cfa.chunk.js.map": "/static/js/787.42c60cfa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b80bea4.css",
+    "static/js/main.7c23f616.js"
+  ]
+}
