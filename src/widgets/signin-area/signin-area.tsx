@@ -14,14 +14,14 @@ const inputArray: IInputProps[] = [
         label: 'Email',
         icon: 'mail',
         placeholder: 'Enter your email address', 
-        errorMessage:'Invalid Email'
+        errorMessage: 'Invalid Email'
     },
     {
         id : 'password',
         label: 'Password',
         icon: 'padlock',
         placeholder: 'Enter your Password', 
-        errorMessage:'Invalid Password'
+        errorMessage: 'Invalid Password'
     }
 ];
 
