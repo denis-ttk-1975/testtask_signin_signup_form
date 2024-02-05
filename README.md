@@ -2,11 +2,12 @@
 
 ## Author - Denis Ulesov
 
-##[!CAUTION] Attention - install via `npm i --legacy-peer-deps`
-##[!ПРЕДУПРЕЖДЕНИЕ] устанавливайте командой `npm i --legacy-peer-deps`
+##[!CAUTION] Attention - install via `npm i --legacy-peer-deps` recommended
+##[!ПРЕДУПРЕЖДЕНИЕ] Рекомендуется устанавка командой `npm i --legacy-peer-deps`
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project deployed and can be viewed at https://testtask-signin-signup-form.vercel.app/
+Проект размещен и может быть доступен для рассмотрения на  https://testtask-signin-signup-form.vercel.app/
 
 
 Постановка задачи:
