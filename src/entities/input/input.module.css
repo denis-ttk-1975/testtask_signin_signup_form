@@ -50,6 +50,9 @@
     font-size: 16px;
     line-height: 21.79px;
     color: #EB4335;
-
-
 }
+
+.inputField_icon {path {fill: #000842;}}
+
+.inputField_icon_error {path {fill: #EB4335;}}
+
