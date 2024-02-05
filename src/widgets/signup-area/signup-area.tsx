@@ -1,5 +1,7 @@
 import React, { SyntheticEvent, JSX } from 'react'; // импорт библиотеки
 
+import { userCreate } from './../../shared/api/api';
+
 import { FormHeader } from '../../features/form-header/form-header';
 import { Form } from '../../features/form/form';
 import useSignUpStore from './store/signUpStore';
@@ -17,7 +19,7 @@ const inputArray: IInputProps[] = [
         label: 'Name',
         icon: 'man',
         placeholder: 'Enter your Name',
-        errorMessage:'Name must be longer than 3 chars'
+        errorMessage:'Name must be longer than 3 LATIN chars'
     },
     {
         id : 'email',
@@ -49,27 +51,22 @@ export const SignUpArea = () => {
     const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
         checkName(true);
         setName(e.target.value);
-        console.log('formState: ', formState);
     };
     const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
         checkEmail(true);
         setEmail(e.target.value);
-        console.log('formState: ', formState);
     };
 
     const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
         checkPassword(true);
         setPassword(e.target.value);
-        console.log('formState: ', formState);
     };
     const onChangeConfirmPassword = (e: React.ChangeEvent<HTMLInputElement>) => {
         checkConfirmPassword(true);
         setConfirmPassword(e.target.value);
-        console.log('formState: ', formState);
     };
 
-    const onSubmitSignUpForm = (e: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
-        console.log('Сабмит');
+    const onSubmitSignUpForm = async (e: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
         e.preventDefault();
         let formFailed = false;
         if (!threeCharsOrDigitsRegex.test(formState.nameValue)) {checkName(false); formFailed = true;}
@@ -78,11 +75,11 @@ export const SignUpArea = () => {
         if (formState.passwordValue !== formState.confirmPasswordValue) {checkConfirmPassword(false); formFailed = true;}
 
         if (formFailed) {
-            console.log('не все хорошо в форме !!!!!!!', 'formState: ', formState );
             return;
         }
 
-        console.log('ВСЕ ХОРОШО ОТПРАВЛЯЕМ ЗАПРОС !!!!!!!', 'formState: ', formState );
+        await userCreate({name: formState.nameValue, email: formState.emailValue, password: formState.passwordValue});
+
         return;
     };
 
@@ -92,7 +89,7 @@ export const SignUpArea = () => {
     inputArray[3].onChange = onChangeConfirmPassword;
     inputArray[0].error = !formState.nameIsValid;
     inputArray[1].error = !formState.emailIsValid;
-    inputArray[2].error = !formState.passwordIsValid; 
+    inputArray[2].error = !formState.passwordIsValid;
     inputArray[3].error = !formState.confirmPasswordIsValid;
 
     return <section className={styles['signUp_Page']}>
@@ -101,6 +98,5 @@ export const SignUpArea = () => {
             <FormHeader title = 'Sign up' substring = 'If you already have an account register' linkString = 'Login here !' />
             <Form inputs = {inputArray} buttonText='Register' submitHandler={onSubmitSignUpForm}/>
         </div>
-
     </section>;
 }

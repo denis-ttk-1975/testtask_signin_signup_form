@@ -1,5 +1,7 @@
 import React, { JSX, SyntheticEvent } from 'react'; // импорт библиотеки
 
+import { userSignIn } from './../../shared/api/api';
+
 import { FormHeader } from '../../features/form-header/form-header';
 import { Form } from '../../features/form/form';
 import { SocialNetworkBox } from '../../entities/socialNetworksBox/socialNetworksBox';
@@ -36,35 +38,33 @@ export const SignInArea = () => {
     const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
         checkEmail(true);
         setEmail(e.target.value);
-        console.log('formState: ', formState);
     };
 
     const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
         checkPassword(true);
         setPassword(e.target.value);
-        console.log('formState: ', formState);
     };
 
-    const onSubmitSignInForm = (e: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
-        console.log('Сабмит');
+    const onSubmitSignInForm = async (e: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
         e.preventDefault();
         let formFailed = false;
         if (!emailRegex.test(formState.emailValue)) {checkEmail(false); formFailed = true;}
         if (!complexPasswordRegex.test(formState.passwordValue)) {checkPassword(false); formFailed = true;}
 
         if (formFailed) {
-            console.log('не все хорошо в форме !!!!!!!', 'formState: ', formState );
             return;
         }
 
-        console.log('ВСЕ ХОРОШО ОТПРАВЛЯЕМ ЗАПРОС !!!!!!!', 'formState: ', formState );
+        await userSignIn(formState.emailValue);
+
         return;
+
     };
 
     inputArray[0].onChange = onChangeEmail;
     inputArray[1].onChange = onChangePassword;
     inputArray[0].error = !formState.emailIsValid;
-    inputArray[1].error = !formState.passwordIsValid; 
+    inputArray[1].error = !formState.passwordIsValid;
 
     return <section className={styles['signIn_Page']}>
         <div className={styles.logo}>Your Logo</div>
