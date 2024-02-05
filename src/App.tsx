@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './App.module.css';
+import styles from './app.module.css';
 import { SigninPage } from './pages/signinPage/signinPage';
 import { SignupPage } from './pages/signupPage/signupPage';
 import { ConfirmEmailPage } from './pages/confirmEmailPage/confirmEmailPage';
