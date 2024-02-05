@@ -19,10 +19,12 @@ export interface IInputProps {
 
 export const Input = (props: IInputProps) => {
 
+    console.log('props.label: ', props.label, 'props.error: ', props.error);
+
     const error = false;
 
-    const inputWrapperClassName = error ? `${styles.inputField_wrapper} ${styles.inputField_wrapper_error}` : `${styles.inputField_wrapper}`;
-    const inputIconClassName = error ? `${styles.inputField_icon} ${styles.inputField_icon_error}` : `${styles.inputField_icon}`;
+    const inputWrapperClassName = props.error ? `${styles.inputField_wrapper} ${styles.inputField_wrapper_error}` : `${styles.inputField_wrapper}`;
+    const inputIconClassName = props.error ? `${styles.inputField_icon} ${styles.inputField_icon_error}` : `${styles.inputField_icon}`;
     const inputType = (props.id === 'password' || props.id === 'confirm_password') ? 'password' : 'text';
 
     const Icon = props.icon === 'man' ? ManIcon : (props.icon === 'mail' ? MailIcon : PadlockIcon);
@@ -30,7 +32,7 @@ export const Input = (props: IInputProps) => {
     return <div className={styles.input_wrapper}>
         <label htmlFor={props.id} className={styles.label}>{props.label}</label> 
         <div className={inputWrapperClassName}><Icon className={inputIconClassName}/><input onChange={props.onChange} type={inputType} id={props.id} className={styles.input} placeholder = { props.placeholder }/></div>
-        <div className={styles.errorCaption}>{error && props.errorMessage}</div>
+        <div className={styles.errorCaption}>{props.error && props.errorMessage}</div>
 
     </div>;
 }

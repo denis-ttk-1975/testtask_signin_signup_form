@@ -1,4 +1,4 @@
-import React, { JSX } from 'react'; // импорт библиотеки
+import React, { SyntheticEvent, JSX } from 'react'; // импорт библиотеки
 
 import styles from './button.module.css';
 
@@ -8,7 +8,7 @@ interface IButtonProps {
 
 export const SubmitButton = (props: IButtonProps) => {
 
-    return <button className={styles.submitButton}>
+    return <button className={styles.submitButton} type='submit'>
         {props.buttonText}
     </button>;
 }

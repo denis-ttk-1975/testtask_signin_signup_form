@@ -5,7 +5,7 @@
     margin-bottom: 16px;
 }
 
-.input, .input:focus {
+.input, .input:focus, input:active {
     outline: none;
     appearance: none;
     border: none;
@@ -15,6 +15,7 @@
     line-height: 21.79px;
     padding-left: 12px;
     color: inherit;
+    background: transparent;
 }
 
 .input::placeholder {
