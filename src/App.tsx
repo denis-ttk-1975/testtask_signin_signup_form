@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <main className={styles.main}>
-        <SigninPage />
+        <SignupPage />
       </main>
     </>
   );

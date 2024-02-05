@@ -14,7 +14,16 @@ interface IFormProps {
 export const Form = (props: IFormProps) => {
     return (
     <>
-        {props.inputs.map((item) => {return <Input key = {item.id} id = {item.id} label = {item.label} icon = {item.icon} placeholder = {item.placeholder} errorMessage={item.errorMessage}/>})}
+        {props.inputs.map((item) => {return <Input
+        key = {item.id}
+        id = {item.id}
+        label = {item.label}
+        icon = {item.icon}
+        placeholder = {item.placeholder}
+        errorMessage={item.errorMessage}
+        onChange={item.onChange} />}
+        )
+        }
         <SubmitButton buttonText = {props.buttonText}/>
     </>
     );

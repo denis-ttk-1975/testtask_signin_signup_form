@@ -14,6 +14,7 @@ export interface IInputProps {
     regex?: string;
     errorMessage: string;
     error?: boolean;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>)=> void
 }
 
 export const Input = (props: IInputProps) => {
@@ -28,7 +29,7 @@ export const Input = (props: IInputProps) => {
 
     return <div className={styles.input_wrapper}>
         <label htmlFor={props.id} className={styles.label}>{props.label}</label> 
-        <div className={inputWrapperClassName}><Icon className={inputIconClassName}/><input type={inputType} id={props.id} className={styles.input} placeholder = { props.placeholder }/></div>
+        <div className={inputWrapperClassName}><Icon className={inputIconClassName}/><input onChange={props.onChange} type={inputType} id={props.id} className={styles.input} placeholder = { props.placeholder }/></div>
         <div className={styles.errorCaption}>{error && props.errorMessage}</div>
 
     </div>;

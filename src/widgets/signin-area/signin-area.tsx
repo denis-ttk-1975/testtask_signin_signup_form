@@ -4,7 +4,9 @@ import { FormHeader } from '../../features/form-header/form-header';
 import { Form } from '../../features/form/form';
 import { SocialNetworkBox } from '../../entities/socialNetworksBox/socialNetworksBox';
 
-import { IInputProps } from './../../entities/input/input'
+import { IInputProps } from './../../entities/input/input';
+
+import useSignInStore from './store/signInStore';
 
 import styles from './signin-area.module.css';
 
@@ -26,6 +28,22 @@ const inputArray: IInputProps[] = [
 ];
 
 export const SignInArea = () => {
+
+    const { formState, setEmail, setPassword, checkEmail, checkPassword } = useSignInStore();
+
+    const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(e.target.value);
+        console.log('formState: ', formState);
+    };
+
+    const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPassword(e.target.value);
+        console.log('formState: ', formState);
+    };
+
+    inputArray[0].onChange = onChangeEmail;
+    inputArray[1].onChange = onChangePassword;
+
     return <section className={styles['signIn_Page']}>
         <div className={styles.logo}>Your Logo</div>
         <div className={styles.form_wrapper}>

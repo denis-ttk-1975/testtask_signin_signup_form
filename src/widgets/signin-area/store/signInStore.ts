@@ -9,16 +9,16 @@ interface IFormState {
     }
     setEmail: (newValue: string) => void
     setPassword: (newValue: string) => void
-    checkEmail?: (value: boolean) => void
-    checkPassword?: (value: boolean) => void
+    checkEmail: (value: boolean) => void
+    checkPassword: (value: boolean) => void
     }
 
 const useSignInStore = create<IFormState>((set) => ({
     formState: {
         emailValue: '',
-        emailIsValid: false,
+        emailIsValid: true,
         passwordValue: '',
-        passwordIsValid: false,
+        passwordIsValid: true,
     },
     setEmail: (newValue) => set((state) => ({
         formState: {
@@ -46,4 +46,4 @@ const useSignInStore = create<IFormState>((set) => ({
     })),
 }))
 
-export default useSignInStore
+export default useSignInStore;
