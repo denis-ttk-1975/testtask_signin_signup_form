@@ -82,9 +82,7 @@ export const SignUpArea = () => {
             return;
         }
 
-        console.log('formState: ', formState);
-
-        console.log('ВСЕ ХОРОШО ОТПРАВЛЯЕМ ЗАПРОС !!!!!!!' );
+        console.log('ВСЕ ХОРОШО ОТПРАВЛЯЕМ ЗАПРОС !!!!!!!', 'formState: ', formState );
         return;
     };
 
